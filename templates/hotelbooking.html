@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hotel Booking Project</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='HotelBooking.css') }}">
+</head>
+<body>
+    <header>
+        <div class="content flex-space">
+            <div class="navlinks">
+                <img class="full-screen-width" src="{{ url_for('static', filename='images/image3.jpg') }}" alt="">
+                <ul id="menulist">
+                    <li><a href="hotelbooking.html">Home</a></li>
+                    <li><a href="checkin.html">Make A Reservation</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                    <li><a href="Signin.html">Sign In</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div class="search-form-container">
+        <h2>Search for Destinations and Hotels</h2>
+        <form id="search-form">
+            <select id="city" name="city">
+                <option value="">Select City</option>
+                {% for city in cities %}
+                <option value="{{ city }}">{{ city }}</option>
+                {% endfor %}
+            </select>
+            <input type="date" id="check-in-date" placeholder="Check-in Date">
+            <input type="date" id="check-out-date" placeholder="Check-out Date">
+            <input type="number" id="num-rooms" placeholder="Number of Rooms">
+            <select id="room-type">
+                <option value="">Select Room Type</option>
+                <option value="single">Single</option>
+                <option value="double">Double</option>
+                <option value="suite">Suite</option>
+            </select>
+            <button type="submit">Search</button>x
+        </form>
+    </div>
+
+</body>
+</html>

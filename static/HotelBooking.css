@@ -1,0 +1,115 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    height: 100%;
+    width: 100%;
+    margin: 0; 
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+.flex-space {
+    display: flex;
+    justify-content: space-between;
+}
+.container {
+    max-width: 100%;
+    margin: auto;
+}
+header {
+    height: 5vh;
+    line-height: 10vh;
+    padding: 0 20px;
+    position: relative;
+}
+header ul {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+header ul li {
+    display: inline-block;
+    text-transform: uppercase;
+    margin: 0;
+}
+header ul li a {
+    color: white;
+    margin: 0 20px;
+    transition: 0.5s;
+}
+header ul li a:hover {
+    color: rgb(251, 251, 15);
+}
+header button {
+    padding: 13px 40px;
+}
+
+
+.full-screen-width {
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    max-width: 100vw;
+    width: 100vw;
+    height: 100vh; 
+    background-position: center;
+    background-size: cover;
+}
+
+@media screen and (max-width: 768px) {
+    header ul li a {
+        margin: 0 10px;
+    }
+    .full-screen-width {
+        background-position: left center; 
+        background-size: auto 100%; 
+    }
+}
+.search-form-container {
+    position: absolute;
+    bottom: 20px; /* Adjust this value to position the form */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-form-container h2 {
+    margin-top: 0;
+    text-align: center;
+}
+
+#search-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#search-form input,
+#search-form select,
+#search-form button {
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: auto;
+}
+
+#search-form button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+#search-form button:hover {
+    background-color: #0056b3;
+}

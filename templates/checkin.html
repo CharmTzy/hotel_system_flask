@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Reservation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Checkin.css') }}" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <ul>
+          <li><a href="hotelbooking">Home</a></li>
+          <li><a href="Contact.html">Contact</a></li>
+          <li><a href="Signin.html">Book Now</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="book-section">
+      <div class="inner-book">
+        <label for="check in">Check in :</label>
+        <input type="date" name="check in" id="check in" />
+        <label for="check out">Check out :</label>
+        <input type="date" name="check out" id="check out" />
+        <input type="number" placeholder="Adults" />
+        <input type="number" placeholder="Children" />
+        <a><input class="book-btn" type="submit" value="Check Ability" /></a>
+      </div>
+    </div>
+  </body>
+</html>
